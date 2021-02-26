@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  box-sizing: border-box;
+}
+body *{
+  box-sizing: inherit; /* box-sizingの値は継承されないので明示的に設定 */
+}
+
+.content_1{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.login{
+  margin-top: 2%;
+}
+
+p.password{
+  margin-top: 3%;
+}
+
+.login{
+  /*width: 360px;*/
+  padding: 3px 8px;
+  border-radius: 6px;
+  /*border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;*/
+  /*background-image: none*/
+  /*background-color: #ddd;*/
+  font-size: 16px;
+}
+
+.password{
+  /*width: 360px;*/
+  padding: 3px 8px;
+  border-radius: 6px;
+  /*border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;*/
+  /*background-image: none*/
+  /*background-color: #ddd;*/
+  font-size: 16px;
+}
+
+
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #66CC66;
+  margin-top: 4%;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #00CC66;
+}
+
+p.copyright{
+  margin-top: 4%;
+}

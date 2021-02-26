@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  box-sizing: border-box;
+}
+body *{
+  box-sizing: inherit; /* box-sizingの値は継承されないので明示的に設定 */
+}
+
+div.container{
+  padding-left: 24%;
+}
+.progressbar {
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  z-index: 0;
+  position: relative;
+  text-align: center;
+}
+.progressbar li {
+  list-style-type: none;
+  width: 20%;
+  float: left;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: #aaa;
+}
+.progressbar li:before {
+  width: 30px;
+  height: 30px;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #eee;
+}
+.progressbar li:after {
+  width: 100%;
+  height: 0px;
+  content: '';
+  position: absolute;
+  background-color: #eee;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+  color: green;
+}
+.progressbar li.active:before {
+  background-color: #55b776;
+  color:#fff;
+}
+.progressbar li.active + li:after {
+  background-color: #55b776;
+}
+
+
+
+.content_1{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.login{
+  margin-top: 9%;
+}
+
+p.user_id{
+  margin-top: 3%;
+}
+
+.nickname{
+  /*width: 360px;*/
+  padding: 3px 8px;
+  border-radius: 6px;
+  /*border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;*/
+  /*background-image: none*/
+  /*background-color: #ddd;*/
+  font-size: 16px;
+}
+
+.mail{
+  /*width: 360px;*/
+  padding: 3px 8px;
+  border-radius: 6px;
+  /*border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;*/
+  /*background-image: none*/
+  /*background-color: #ddd;*/
+  font-size: 16px;
+}
+
+.password{
+  /*width: 360px;*/
+  padding: 3px 8px;
+  border-radius: 6px;
+  /*border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;*/
+  /*background-image: none*/
+  /*background-color: #ddd;*/
+  font-size: 16px;
+}
+
+
+.btn--orange,
+button.btn--orange {
+  color: #fff;
+  background-color: #66CC66;
+  margin-top: 1%;
+}
+.btn--orange:hover,
+button.btn--orange:hover {
+  color: #fff;
+  background: #00CC66;
+}
+
+p.copyright{
+  margin-top: 5%;
+}

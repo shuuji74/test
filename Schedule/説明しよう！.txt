@@ -1,0 +1,17 @@
+all_task.php
+ →すべてのタスクを表示する
+
+class_task.php
+ →クラスのタスクを表示する
+
+group_task.php
+ →グループのタスクを表示する
+
+solo_task.php
+ →個人のタスクを表示する
+
+
+本番環境の時bdd.php内の「setcookie('id','10001',time()+60*60*24*7);」を削除して使用してください！
+
+スケジュールを表示させたいところに「require_once('タスク名.php');」を使用してね～(´艸｀*)
+
