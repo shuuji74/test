@@ -50,6 +50,32 @@ $events = $taskg->fetchAll();
 		float: none;
 		margin: 0 auto;
 	}
+	#page-top {
+		position: fixed;
+		right: 5px;
+		bottom: 20px;
+		height: 50px;
+		text-decoration: none;
+		font-weight: bold;
+		transform: rotate(90deg);
+		font-size: 90%;
+		line-height: 1.5rem;
+		color: #737373;
+		padding: 0 0 0 35px;
+		border-top: solid 1px;
+		padding-left: 55px;
+	}
+	#page-top::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -1px;
+		left: 0px;
+		width: 15px;
+		border-top: solid 1px;
+		transform: rotate(35deg);
+		transform-origin: left top;
+	}
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -242,6 +268,8 @@ $events = $taskg->fetchAll();
 		</div>
 
     </div>
+    <a href="" id="page-top">TOP</a>
+
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
