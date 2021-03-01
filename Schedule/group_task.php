@@ -8,7 +8,7 @@ $g->execute();
 $group = $g->fetchAll();
 
 
-$sql = "SELECT task_g_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM group_task";
+$sql = "SELECT task_g_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM group_task WHERE member_id = '". $_COOKIE['id'] ."'";
 
 $taskg = $bdd->prepare($sql);
 $taskg->execute();
