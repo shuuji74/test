@@ -8,7 +8,7 @@ $c->execute();
 
 $class = $c->fetchAll();
 
-$sql = "SELECT task_c_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM class_task";
+$sql = "SELECT task_c_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM class_task WHERE member_id = '". $_COOKIE['id'] ."'";
 $taskc = $bdd->prepare($sql);
 $taskc->execute();
 $events = $taskc->fetchAll();
