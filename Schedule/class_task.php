@@ -266,7 +266,7 @@ $events = $taskc->fetchAll();
 				center: 'title',
 				right: 'month,basicWeek,basicDay'
 			},
-			defaultDate: '" . <?php echo $date; ?> . "',
+			defaultDate: ' <?php echo $date; ?> ',
 			timeZone: 'Asia/Tokyo',
 			locale: 'ja',
 			editable: true,
