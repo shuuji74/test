@@ -18,7 +18,7 @@ $c->execute();
 $class = $c->fetchAll();
 
 
-$sql = "SELECT task_s_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM solo_task";
+$sql = "SELECT task_s_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM solo_task WHERE member_id = '". $_COOKIE['id'] ."'";
 
 // $sql = "SELECT id, title, start, end, color FROM solo_tasak ";
 
@@ -28,13 +28,13 @@ $tasks->execute();
 $events = $tasks->fetchAll();
 
 
-$sql = "SELECT task_g_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM group_task";
+$sql = "SELECT task_g_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM group_task WHERE member_id = '". $_COOKIE['id'] ."'";
 $taskg = $bdd->prepare($sql);
 $taskg->execute();
 $events = array_merge($events, $taskg->fetchAll());
 
 
-$sql = "SELECT task_c_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM class_task";
+$sql = "SELECT task_c_id AS id, task_name AS title, task_start AS start, task_finish AS end, color, task_priority FROM class_task WHERE member_id = '". $_COOKIE['id'] ."'";
 $taskc = $bdd->prepare($sql);
 $taskc->execute();
 $events = array_merge($events, $taskc->fetchAll());
