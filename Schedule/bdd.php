@@ -1,5 +1,7 @@
 <?php
-setcookie('id','10001',time()+60*60*24*7);
+if(!isset($_COOKIE['id'])){
+        setcookie('id','10001',time()+60*60*24*7);
+}
 $date = date("Y-m-d");
 try
 {
